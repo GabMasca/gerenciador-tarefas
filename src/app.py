@@ -1,17 +1,19 @@
 tasks = []
 current_id = 1
 
-def create_task(title, description):
+def create_task(title, description, priority="media"):
     global current_id
     task = {
         "id": current_id,
         "title": title,
         "description": description,
+        "priority": priority,
         "status": "pendente"
     }
     tasks.append(task)
     current_id += 1
     return task
+
 
 def list_tasks():
     return tasks
